@@ -1,4 +1,4 @@
-package com.game.graf_d.callofdarvin.model.city;
+package com.game.graf_d.callofdarvin.model.city.location;
 
 /**
  * Created by Graf_D on 17.11.2017.

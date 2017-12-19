@@ -2,6 +2,9 @@ package com.game.graf_d.callofdarvin;
 
 import com.game.graf_d.callofdarvin.model.city.CityGraph;
 import com.game.graf_d.callofdarvin.model.city.CityGraphRealisation;
+import com.game.graf_d.callofdarvin.model.city.Route;
+import com.game.graf_d.callofdarvin.model.city.SearchMethod;
+import com.game.graf_d.callofdarvin.model.city.UnitType;
 import com.game.graf_d.callofdarvin.model.exception.IllegalParrentException;
 import com.game.graf_d.callofdarvin.model.monster.RealMonster;
 import com.game.graf_d.callofdarvin.model.monster.generation.RealGeneration;
@@ -23,7 +26,10 @@ public class Test {
 
     private static void testGraph() {
         CityGraph cityGraph = new CityGraph(CityGraphRealisation.route, CityGraphRealisation.locations);
-        cityGraph.findRoute(0,1);
+      Route route=cityGraph.findRoute(CityGraphRealisation.PORTAL_IN_BOTTOM, CityGraphRealisation.PORTAL_OUT_LEFT, SearchMethod.Random, UnitType.Monster);
+      System.out.println(route);
+       route= cityGraph.findRoute(CityGraphRealisation.CIVIL_1, CityGraphRealisation.PUB, SearchMethod.Random, UnitType.Civilian);
+       System.out.println(route);
     }
 
     private static void testMonsters() {
